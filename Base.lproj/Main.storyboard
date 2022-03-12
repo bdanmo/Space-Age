@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Space_Age" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="WCe-FB-wzn">
+                                <rect key="frame" x="27" y="39" width="320" height="526"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08Q-Zx-9NY">
+                                        <rect key="frame" x="89.5" y="0.0" width="141" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="141" id="MuF-Y9-b48"/>
+                                            <constraint firstAttribute="height" constant="26" id="uKJ-Pw-Lm5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <color key="textColor" red="0.93725490196078431" green="0.72941176470588232" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Ex. 28" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nZU-2e-QQd">
+                                        <rect key="frame" x="95" y="44" width="130" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="nkf-3T-SrE"/>
+                                            <constraint firstAttribute="width" constant="130" id="pZK-me-TYJ"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a planet:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-W2-ql1">
+                                        <rect key="frame" x="98" y="106" width="124" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="124" id="axk-LV-3XV"/>
+                                            <constraint firstAttribute="height" constant="26" id="u45-3i-Wtm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <color key="textColor" red="0.93725490196078431" green="0.72941176470588232" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="g6q-Me-yc9">
+                                        <rect key="frame" x="0.0" y="150" width="320" height="216"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="tLq-hB-rIY"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="WJV-4K-uqB"/>
+                                            <outletCollection property="gestureRecognizers" destination="Mxl-TZ-YCV" appends="YES" id="Iry-J8-4A2"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-Ev-qqZ">
+                                        <rect key="frame" x="95" y="384" width="130" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="INd-OH-rfo"/>
+                                            <constraint firstAttribute="height" constant="44" id="wV0-D5-Krd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <state key="normal" title="Calculate!"/>
+                                        <connections>
+                                            <action selector="showCalculation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qdo-wQ-Naq"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculation Goes Here" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5k-B4-Wk0">
+                                        <rect key="frame" x="20" y="446" width="280" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="qJf-yc-sdW"/>
+                                            <constraint firstAttribute="height" constant="80" id="z80-EE-rzD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                        <color key="textColor" red="0.93725490196078431" green="0.72941176470588232" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23921568627450979" green="0.24313725490196078" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.23921568627450979" green="0.24313725490196078" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WCe-FB-wzn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lol-OW-fhn"/>
+                            <constraint firstItem="WCe-FB-wzn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="ORh-lJ-5kx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="calculationLabel" destination="C5k-B4-Wk0" id="d4K-xL-EYd"/>
+                        <outlet property="planetPicker" destination="g6q-Me-yc9" id="1f4-0K-Isq"/>
+                        <outlet property="userInput" destination="nZU-2e-QQd" id="Q65-YJ-kTn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Mxl-TZ-YCV">
+                    <connections>
+                        <action selector="tapOnPicker:" destination="BYZ-38-t0r" id="8dA-Pg-6Iz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+</document>
